@@ -67,7 +67,7 @@
       <th>KDA</th>
       <th>Kill</th><th>Assist</th><th>Death</th>
       <th>Vàng</th><th>Sát thương</th><th>Rank</th>
-      <th>Elo</th> <th>EloChange</th>
+     <th>EloChange</th>
     </tr>
     <% player.matches.forEach(m => { %>
         <tr>
@@ -87,7 +87,6 @@
           <td><%= m.gold.toFixed(0) %></td>
           <td><%= m.dame.toFixed(0) %></td>
           <td><%= m.stats %></td>
-          <td><%= player.elo.toFixed(0) %></td>
           <td><%= m.eloChange %></td>
         </tr>
     <% }) %>

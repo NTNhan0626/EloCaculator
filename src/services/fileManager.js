@@ -35,7 +35,9 @@ function loadDataFromFile() {
                     m.gold,
                     m.dame,
                     m.totalEloGap,
-                    m.stats // nếu bạn lưu cả stats
+                    m.stats,
+                    m.eloChange // nếu bạn lưu cả stats
+                    
                 ));
                 return player;
             });

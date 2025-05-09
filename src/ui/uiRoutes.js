@@ -22,6 +22,7 @@ router.get('/players/all', (req, res) => {
 router.get('/players/:name', (req, res) => {
   const players = loadDataFromFile();
   const player = players.find(p => p.name.toLowerCase() === req.params.name.toLowerCase());
+  console.log(player.matches)
   if (!player) return res.status(404).send('<h2>Không tìm thấy người chơi</h2>');
 
   res.render('playerDetail', { player });
