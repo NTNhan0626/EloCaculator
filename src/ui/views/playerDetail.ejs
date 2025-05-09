@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= player.name %> - Lịch sử</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #007bff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .button {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Lịch sử đấu của <%= player.name %></h2>
+  <table>
+    <tr>
+      <th>ID</th><th>Kết quả</th><th>Vai trò</th>
+      <th>KDA</th>
+      <th>Kill</th><th>Assist</th><th>Death</th>
+      <th>Vàng</th><th>Sát thương</th><th>Rank</th>
+      <th>Elo</th> <th>EloChange</th>
+    </tr>
+    <% player.matches.forEach(m => { %>
+        <tr>
+          <td><%= m.id %></td>
+          <td><%= m.result === 'win' ? 'Thắng' : 'Thua' %></td>
+          <td><%= m.roles %></td>
+          <td>
+            <% if (m.deaths > 0) { %>
+              <%= ((m.kills + m.assists) / m.deaths).toFixed(2) %>
+            <% } else { %>
+              <%= m.kills + m.assists %>
+            <% } %>
+          </td>
+          <td><%= m.kills %></td>
+          <td><%= m.assists %></td>
+          <td><%= m.deaths %></td>
+          <td><%= m.gold.toFixed(0) %></td>
+          <td><%= m.dame.toFixed(0) %></td>
+          <td><%= m.stats %></td>
+          <td><%= player.elo.toFixed(0) %></td>
+          <td><%= m.eloChange %></td>
+        </tr>
+    <% }) %>
+  </table>
+  <a href="/" class="button">⬅ Quay lại</a>
+</body>
+</html>

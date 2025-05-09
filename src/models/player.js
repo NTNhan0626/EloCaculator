@@ -5,5 +5,9 @@ class Player {
         this.elo = elo;
         this.matches = matches
     }
+
+    updateElo(elo) {
+        this.elo += elo;
+    }
 }
 module.exports = Player;
