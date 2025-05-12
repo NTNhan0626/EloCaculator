@@ -1,5 +1,5 @@
 # EloCaculator
-# task1 (research)
+# task1 (research strict mode)
 - định nghĩa:
 strict mode là một tính năng trong JavaScript được giới thiệu từ ECMAScript 5 (ES5), nhằm giúp phát hiện sớm các lỗi tiềm ẩn và cải thiện hiệu năng của mã. Khi bật strict mode, JavaScript sẽ áp dụng các quy tắc nghiêm ngặt hơn trong việc biên dịch và thực thi mã.
 - cách khai báo:
