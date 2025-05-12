@@ -1,4 +1,20 @@
 # EloCaculator
+# task1 (research)
+- định nghĩa:
+strict mode là một tính năng trong JavaScript được giới thiệu từ ECMAScript 5 (ES5), nhằm giúp phát hiện sớm các lỗi tiềm ẩn và cải thiện hiệu năng của mã. Khi bật strict mode, JavaScript sẽ áp dụng các quy tắc nghiêm ngặt hơn trong việc biên dịch và thực thi mã.
+- cách khai báo:
+'use strict'; dùng cho toàn bộ file hoặc function.
+hoặc chỉ dùng cho hàm cụ thể
+function myFunction() {
+  'use strict';
+}
+- công dụng:
+Giúp tránh các lỗi thường gặp trong JavaScript.
+Cải thiện hiệu năng vì các trình thông dịch có thể tối ưu tốt hơn.
+Ngăn ngừa việc tạo ra các biến global không mong muốn.
+Bảo vệ từ việc ghi đè các thuộc tính, biến không nên thay đổi.
+
+# task2 (elo caculator)
 # Xây dựng data
 Đầu tiên xây dựng lớp player gồm các thông tin như id, name, elo, match:
 Mach ở đây là danh sách các trận đấu của player
